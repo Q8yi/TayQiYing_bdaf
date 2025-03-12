@@ -17,7 +17,7 @@ contract QyToken is ERC20 {
 
     function getTokens(address _to, uint _amt) external payable {
         require(owner == msg.sender);
-        _mint(_to, _amt);
+        super.transfer(_to, _amt);
     }
 
     function exchangeToken(address from, uint256 value) external {

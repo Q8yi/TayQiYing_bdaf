@@ -28,8 +28,8 @@ async function main() {
     console.log("processing deposit");
     const aliceDepo = await lock.connect(alice).deposit({ value: ETHamt });
     const bobDepo = await lock.connect(bob).deposit({ value: ETHamt });
-    console.log("aliceLocked Trx hash:", aliceDepo.hash);
-    console.log("bobLocked Trx hash:", bobDepo.hash);
+    console.log("aliceLocked deposit hash:", aliceDepo.hash);
+    console.log("bobLocked deposit hash:", bobDepo.hash);
 
     console.log("processing lock");
     const aliceLocked = await lock.connect(alice).lock({ value: ETHamt });
