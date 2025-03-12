@@ -20,7 +20,10 @@ QyToken inherits from ERC20
 TokenLock.sol
 - represents different functions to lock and unlock ETH
 - including different payable functions for withdrawal, deposits and transfers (with .call )
+```
 
+Execution Order
+```shell
 ignition/modules
 - npx hardhat run in the following order:
 1) Deploy.js
@@ -30,3 +33,4 @@ Please wait 10 minutes after running Lock.js
 4) BobUnlock.js
 
 ```
+
