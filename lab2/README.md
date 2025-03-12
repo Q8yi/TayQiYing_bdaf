@@ -11,3 +11,26 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Deploy.js
 ```
+
+About the contracts
+```shell
+QyToken inherits from ERC20
+- initialised with a total supply of 100,000,000
+
+TokenLock.sol
+- represents different functions to lock and unlock ETH
+- including different payable functions for withdrawal, deposits and transfers (with .call )
+```
+
+Execution Order
+```shell
+ignition/modules
+- npx hardhat run in the following order:
+1) Deploy.js
+2) Lock.js
+Please wait 10 minutes after running Lock.js
+3) AliceUnlock.js
+4) BobUnlock.js
+
+```
+
