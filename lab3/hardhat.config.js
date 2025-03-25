@@ -18,7 +18,7 @@ module.exports = {
   },
   networks:{
     zircuit: {
-      url: `https://mainnet.zircuit.com`,
+      url: `https://zircuit-mainnet.drpc.org`,
       accounts: [`0x${PRIVATE_KEY}`, `0x${ALICE_KEY}`, `0x${BOB_KEY}`]
     }
   }

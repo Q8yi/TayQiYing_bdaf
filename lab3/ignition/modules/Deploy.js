@@ -5,7 +5,7 @@ async function main() {
 
     console.log("Deploying contract");
 
-    const Factory = await hre.ethers.getContractAt("FactoryContract");
+    const Factory = await hre.ethers.getContractFactory("FactoryContract");
 
     console.log("awaitin");
 

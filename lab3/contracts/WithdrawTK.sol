@@ -7,15 +7,29 @@ import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract WithdrawTK {
 
-    address payable private owner;
+    event Event(address indexed add, uint256 amt);
+    address payable public owner;
 
     constructor() {
         owner = payable(msg.sender);
     }
 
-    function getTokens(address token, uint256 _amt) external payable {
-        require(owner == msg.sender);
+    receive() external payable {}
+    fallback() external payable {}
+
+    function getOwner() public view returns (address) {
+        return owner;
+    }
+
+    modifier OnlyOwner {
+        require(msg.sender == owner, 'No Access');
+        _;
+    }
+
+    function getTokens(address token, uint256 _amt) external payable OnlyOwner {
         require(ERC20(token).balanceOf(address(this)) >= _amt, "insufficient balance");
         ERC20(token).transfer(owner, _amt);
+        emit Event(msg.sender, _amt);
+
     }
 }
