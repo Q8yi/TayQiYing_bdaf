@@ -26,9 +26,9 @@ contract WithdrawTK {
         _;
     }
 
-    function getTokens(address token, uint256 _amt) external payable OnlyOwner {
-        require(ERC20(token).balanceOf(address(this)) >= _amt, "insufficient balance");
-        ERC20(token).transfer(owner, _amt);
+    function getTokens(ERC20 token, uint256 _amt) external payable OnlyOwner {
+        require(token.balanceOf(address(this)) >= _amt, "insufficient balance");
+        token.transfer(owner, _amt);
         emit Event(msg.sender, _amt);
 
     }
