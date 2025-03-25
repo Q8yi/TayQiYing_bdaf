@@ -3,7 +3,7 @@ const hre = require("hardhat");
 async function main() {
     const [owner, alice, bob] = await hre.ethers.getSigners();
 
-    const factory = await hre.ethers.getContractAt("FactoryContract", "0x9cBdbA220497F18E1B4758f236244Ff91B615a8e");
+    const factory = await hre.ethers.getContractAt("FactoryContract", "0x9889dd6E0ADB7eAcE29A253664c9a21130b08e7E");
     const qyToken = await hre.ethers.getContractAt("QyToken", "0xF3464794a18f7b4aC4D1A2068dDE700215112F18", owner);
 
     const byteCode = await factory.getContractByteCode();
@@ -27,7 +27,6 @@ async function main() {
     console.log(bal >= 5);
 
     const withdrawToken = await computedContract.connect(owner).getTokens(qyToken, 5);
-    console.log(withdrawToken);
     console.log("transaction hash for withdrawal:", withdrawToken.hash);
 
 
