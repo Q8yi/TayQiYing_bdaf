@@ -27,9 +27,7 @@ contract Vault {
     }
 
     function _updateSharePrice() private {
-        sharePrice = totalShares == 0
-                    ? 0
-                    : ERC20(underlyingToken).balanceOf(address(this))  / totalShares;
+        sharePrice = totalShares == 0 ? 0 : ERC20(underlyingToken).balanceOf(address(this))  / totalShares;
     }
 
     function donates(uint256 _amount) external {
@@ -39,10 +37,7 @@ contract Vault {
     }
 
     function deposit(uint256 _amount) external {
-        uint256 shares = totalShares == 0
-                    ? _amount
-                    : (_amount * totalShares) / ERC20(underlyingToken).balanceOf(address(this));
-
+        uint256 shares = totalShares == 0 ? _amount : (_amount * totalShares) / ERC20(underlyingToken).balanceOf(address(this));
         totalShares += shares;
         funds[msg.sender] += shares;
         ERC20(underlyingToken).transferFrom(msg.sender, address(this), _amount);
