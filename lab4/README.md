@@ -32,7 +32,8 @@ Execution Order
     a) all test except "securityRisk" are testing the basic functions that vault have, ensuring accuracy
     b) while securityRisk test the security risk of takeFeeAsOwner()
         - it shows how owner can withdraw all the funds in the vault with ease, lower the reliability and affecting shareprice of vault
-2) TestOverview.js -> simulate scenario written under https://github.com/bdaf-course/bdaf-coursepage.git/lab04 Overview
+2) TestOverview.js
+    -> simulate scenario written under https://github.com/bdaf-course/bdaf-coursepage.git/lab04 Overview
 3) TestAttack.js -> simulate inflation attack
 
 ```
