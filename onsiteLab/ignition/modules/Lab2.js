@@ -14,8 +14,6 @@ async function main() {
 
   console.log("Lab2 deployed to:", lab2DeployedAddress);
 
-  const No2WhaleOnlyBadge = await hre.ethers.getContractAt("No2WhaleOnlyBadge", "0xac9a1d6E3452D55dc42aBB8AE3ACEAd98C089FAc");
-
   const Lab2_output = await hre.ethers.getContractAt("Lab2", lab2DeployedAddress);
   const loaning = await Lab2_output.callLoan();
   console.log("loaning", loaning.hash);
