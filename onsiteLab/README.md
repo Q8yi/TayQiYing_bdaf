@@ -29,5 +29,13 @@ npx hardhat run ignition\modules\Deploy.js --network zircuit_garfield_testnet
 
 Lab 2
 
+1) Deploying contract to override executeOperation function in IFlashLoanReceiver
+npx hardhat run ignition\modules\Lab2.js --network zircuit_garfield_testnet
+
+Lab 3
+
+1) Deploying contract to override mocking function in IMock
+npx hardhat run ignition\modules\Lab3.js --network zircuit_garfield_testnet
+
 
 ```
