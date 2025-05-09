@@ -8,7 +8,7 @@ contract OnSiteChecker {
 
     address public token = 0x0CB70e82cDA48ac413d15dDb5782130F57ef8844;
     address public whalebadge = 0xac9a1d6E3452D55dc42aBB8AE3ACEAd98C089FAc;
-    address public proofOfProxy = 0xC0b4f10e6b91B10d77CC80a34d457663f632431D;
+    address public proofOfProxy = 0x76C44B7Fa2f091d9465032dC5B8F111Dcf6ECf46;
 
     mapping(address => uint256) public scores;
     mapping(uint256 => mapping(address => bool)) public lab;
