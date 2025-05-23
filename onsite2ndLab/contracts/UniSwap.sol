@@ -46,7 +46,7 @@ contract UniSwap {
                 require(successRefund, "unable to refund extra");
                 updatedAmt = _amount - (_amount % 3);
             }
-            require(firstToken.balanceOf(address(this)) >= updatedAmt, "Insufficient Token in contract");
+            require(firstToken.balanceOf(address(this)) >= updatedAmt, "Insufficient Token1 in contract");
             success1 = firstToken.transfer(msg.sender, updatedAmt);
             emit Swap(msg.sender, secTokenAdd, _amount, firstTokenAdd, updatedAmt, _amount % 3);
 
