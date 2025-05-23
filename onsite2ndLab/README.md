@@ -23,4 +23,5 @@ Lab2.js
 
 Lab3.js
 -> aims to create uniswap contract with 1 QyToken to 3 QyToken1
+-> kindly refer to these 3 contracts : QyToken.sol, QyToken1.sol, UniSwap.sol
 ```
