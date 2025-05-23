@@ -15,7 +15,7 @@ async function main() {
   console.log("Lab2 deployed to:", lab2DeployedAddress);
 
   const Lab2_output = await hre.ethers.getContractAt("Lab2", lab2DeployedAddress);
-  const loaning = await Lab2_output.callLoan();
+  const loaning = await Lab2_output.callLoan(); //overrides the No2WhaleOnlyBadge executeOperation function
   console.log("loaning", loaning.hash);
 
 }

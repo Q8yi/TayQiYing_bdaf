@@ -16,7 +16,7 @@ async function main() {
 
   const Lab3Product = await hre.ethers.getContractAt("Lab3", lab3DeployedAddress);
 
-  const proxyCall = await Lab3Product.callProxy();
+  const proxyCall = await Lab3Product.callProxy(); //override mocking function
   console.log("proxy call", proxyCall.hash);
 
 }

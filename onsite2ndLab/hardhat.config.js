@@ -22,6 +22,10 @@ module.exports = {
       accounts: [`${PRIVATE_KEY}`],
       //url: `https://zircuit1-testnet.p2pify.com`,
       //accounts: [ZIRCUIT_PRIVATE_KEY]
+    },
+    zircuit: {
+      url: `https://zircuit-mainnet.drpc.org`,
+      accounts: [`0x${PRIVATE_KEY}`]
     }
   }
 };
